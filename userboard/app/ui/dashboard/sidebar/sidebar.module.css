@@ -1,0 +1,17 @@
+.container {
+    position: sticky;
+}
+
+.username {
+    font-weight: 500;
+}
+
+.userTitle {
+    font-size: 12px;
+    color: var(--textSoft);
+}
+
+.cat {
+    font-size: 14px;
+    color: var(--textSoft);
+}
