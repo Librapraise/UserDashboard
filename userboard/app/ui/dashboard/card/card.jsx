@@ -2,7 +2,6 @@ import React from 'react';
 import { MdSupervisedUserCircle } from "react-icons/md";
 
 
-
 export default function Card() {
   return (
     <div className='flex bg-[#182237] p-5 rounded-lg gap-3 w-full hover:bg-[#2e374a]'>

@@ -84,7 +84,7 @@ const menuItems = [
 
 export default function Sidebar() {
   return (
-    <div className={`${styles.container} `}>
+    <div className={`${styles.container} h-[500px]`}>
       <div className={`${styles.user} flex items-center gap-3 mb-3`}>
         <Image alt="" src="/noavatar.png" width="50" height="50" className='rounded-full '/>
         <div className='flex flex-col'>

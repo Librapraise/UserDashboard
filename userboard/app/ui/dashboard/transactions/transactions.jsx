@@ -24,7 +24,7 @@ export default function Transactions() {
               John Doe
             </td>
             <td>
-              <span>pending</span>
+              <span className='p-2 text-white text-[14px] rounded-lg bg-[#f7cb7375]'>pending</span>
             </td>
             <td>14.04.2024</td>
             <td>$3,200:00</td>
@@ -35,7 +35,7 @@ export default function Transactions() {
               John Doe
             </td>
             <td>
-              <span>Cancelled</span>
+              <span className='p-2 text-white text-[14px] rounded-lg bg-[#f7737375]'>Cancelled</span>
             </td>
             <td>14.04.2024</td>
             <td>$3,200:00</td>
@@ -46,7 +46,7 @@ export default function Transactions() {
               John Doe
             </td>
             <td>
-              <span>Done</span>
+              <span className='p-2 text-white text-[14px] rounded-lg bg-[#afd6ee75]'>Done</span>
             </td>
             <td>14.04.2024</td>
             <td>$3,200:00</td>
@@ -57,7 +57,7 @@ export default function Transactions() {
               John Doe
             </td>
             <td>
-              <span>pending</span>
+              <span className='p-2 text-white text-[14px] rounded-lg bg-[#f7cb7375]'>pending</span>
             </td>
             <td>14.04.2024</td>
             <td>$3,200:00</td>
