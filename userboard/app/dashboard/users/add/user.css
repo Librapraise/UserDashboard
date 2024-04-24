@@ -1,0 +1,14 @@
+
+
+form select, form input, form textarea {
+    padding: 30px;
+    background-color: transparent;
+    color: var(--text);
+    border: 2px solid grey;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+
+form input {
+    background-color: var(--bg);
+}
