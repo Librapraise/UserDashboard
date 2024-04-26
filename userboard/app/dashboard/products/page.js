@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { fetchProducts } from '@/app/lib/data';
 import "../users/users.css"
+import { deleteProduct } from '@/app/lib/actions';
 
 
 
@@ -47,13 +48,16 @@ const Products = async ({ searchParams }) => {
             <td>$123</td>
             <td>Apr 22 2024</td>
             <td>33</td>
-            <td className='space-x-2'>
-              <Link href="/dashboard/products/test">
-                <button className='bg-[teal] cursor-pointer px-3 py-1 max-w-max rounded-[10px]'>View</button>
-              </Link>
-              <Link href="/">
-                <button className='bg-[crimson] cursor-pointer px-3 py-1 max-w-max rounded-[10px]'>Delete</button>
-              </Link>
+            <td className='space-x-2 flex'>
+              <div className='flex gap-2'>
+                <Link href="/dashboard/products/test">
+                  <button className='bg-[teal] cursor-pointer px-3 py-1 max-w-max rounded-[10px]'>View</button>
+                </Link>
+                <form action={deleteProduct} >
+                  <input type='hidden' name='id' value="id" />
+                  <button className='bg-[crimson] cursor-pointer px-3 py-1 max-w-max rounded-[10px]'>Delete</button>
+                </form>
+              </div>
             </td>
           </tr>
 
@@ -67,12 +71,15 @@ const Products = async ({ searchParams }) => {
             <td>Apr 22 2024</td>
             <td>55</td>
             <td className='space-x-2'>
-              <Link href="/dashboard/products/test">
-                <button className='bg-[teal] cursor-pointer px-3 py-1 max-w-max rounded-[10px]'>View</button>
-              </Link>
-              <Link href="/">
-                <button className='bg-[crimson] cursor-pointer px-3 py-1 max-w-max rounded-[10px]'>Delete</button>
-              </Link>
+              <div className='flex gap-2'>
+                <Link href="/dashboard/products/test">
+                  <button className='bg-[teal] cursor-pointer px-3 py-1 max-w-max rounded-[10px]'>View</button>
+                </Link>
+                <form action={deleteProduct} >
+                  <input type='hidden' name='id' value="id" />
+                  <button className='bg-[crimson] cursor-pointer px-3 py-1 max-w-max rounded-[10px]'>Delete</button>
+                </form>
+              </div>
             </td>
           </tr>
         </tbody>

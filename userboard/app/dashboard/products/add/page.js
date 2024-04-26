@@ -1,10 +1,11 @@
 import React from 'react'
 import "./addproducts.css"
+import { addProduct } from '@/app/lib/actions'
 
 export default function AddProductPage() {
   return (
     <div className='mt-4 bg-[#182237] p-4 rounded-lg'>
-        <form action='' className='flex flex-wrap justify-between'>
+        <form action={addProduct} className='flex flex-wrap justify-between'>
           <input className='w-[45%]' type='text' placeholder='title' name='title' required />
 
           <select name='cat' id='cat' className='w-[45%] '>
@@ -21,7 +22,7 @@ export default function AddProductPage() {
           <textarea
             name='desc'
             id='desc'
-            rows="16"
+            rows="10"
             placeholder='description' 
             className='w-full'         
           ></textarea>

@@ -27,7 +27,7 @@ const Pagination = ({ count }) => {
   return (
     <div className='flex justify-between items-center mt-4'>
         <button 
-          className='bg-[#cccc] cursor-pointer px-3 py-1 max-w-max rounded-[5px]' 
+          className='bg-[#cccc] px-3 py-1 max-w-max rounded-[5px] cursor-not-allowed' 
           disabled={!hasPrev} 
           onClick={() => handleChangePage("prev")}
         >

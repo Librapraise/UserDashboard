@@ -6,6 +6,7 @@ import Image from 'next/image'
 import "./users.css";
 import Pagination from '@/app/ui/dashboard/pagination/pagination';
 import { fetchUsers } from '@/app/lib/data';
+import { deleteUser } from '@/app/lib/actions';
 
 
 
@@ -49,12 +50,15 @@ const UsersPage = async ({ searchParams }) => {
             <td>client</td>
             <td>passive</td>
             <td className='space-x-2'>
-              <Link href="/dashboard/users/test">
-                <button className='bg-[teal] cursor-pointer px-3 py-1 max-w-max rounded-[10px]'>View</button>
-              </Link>
-              <Link href="/">
-                <button className='bg-[crimson] cursor-pointer px-3 py-1 max-w-max rounded-[10px]'>Delete</button>
-              </Link>
+              <div className='flex gap-2'>
+                <Link href="/dashboard/users/test">
+                  <button className='bg-[teal] cursor-pointer px-3 py-1 max-w-max rounded-[10px]'>View</button>
+                </Link>
+                <form action={deleteUser} >
+                  <input type='hidden' name='id' value="id" />
+                  <button className='bg-[crimson] cursor-pointer px-3 py-1 max-w-max rounded-[10px]'>Delete</button>
+                </form>
+              </div>
             </td>
           </tr>
 
@@ -68,12 +72,15 @@ const UsersPage = async ({ searchParams }) => {
             <td>Admin</td>
             <td>active</td>
             <td className='space-x-2'>
-              <Link href="/dashboard/users/test">
-                <button className='bg-[teal] cursor-pointer px-3 py-1 max-w-max rounded-[10px]'>View</button>
-              </Link>
-              <Link href="/">
-                <button className='bg-[crimson] cursor-pointer px-3 py-1 max-w-max rounded-[10px]'>Delete</button>
-              </Link>
+              <div className='flex gap-2'>
+                <Link href="/dashboard/users/test">
+                  <button className='bg-[teal] cursor-pointer px-3 py-1 max-w-max rounded-[10px]'>View</button>
+                </Link>
+                <form action={deleteUser} >
+                  <input type='hidden' name='id' value="id" />
+                  <button className='bg-[crimson] cursor-pointer px-3 py-1 max-w-max rounded-[10px]'>Delete</button>
+                </form>
+              </div>
             </td>
           </tr>
         </tbody>

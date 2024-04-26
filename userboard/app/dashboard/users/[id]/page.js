@@ -1,8 +1,14 @@
 import React from 'react';
 import "./id.css"
 import Image from 'next/image';
+import { fetchUser } from '@/app/lib/data';
+import { updateUser } from '@/app/lib/actions';
 
-export default function SingleUserPage() {
+const SingleUserPage = async ({ params }) => {
+
+    const { id } = params;
+    const user = await fetchUser(id);
+
   return (
     <div className='flex gap-12 mt-5'>
         <div className='infocontainer font-bold p-5 rounded-[10px]'>
@@ -13,7 +19,8 @@ export default function SingleUserPage() {
         </div>
 
         <div className='formcontainer '>
-            <form action='' className='flex flex-col'>
+            <form action={ updateUser } className='flex flex-col'>
+                <input type='hidden' name='id' value="id" />
                 <label>Username</label>
                 <input type='text' name='username' placeholder='John Doe' />
                 <label>Email</label> 
@@ -40,3 +47,6 @@ export default function SingleUserPage() {
     </div>
   )
 }
+
+
+export default SingleUserPage;

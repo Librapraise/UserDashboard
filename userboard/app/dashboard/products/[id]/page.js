@@ -1,8 +1,14 @@
 import React from 'react';
 import "./id.css"
 import Image from 'next/image';
+import { updateProduct } from '@/app/lib/actions';
 
-export default function SingleProductPage() {
+const SingleProductPage = async ({ params}) => {
+
+    const { id } = params;
+    const product = await fetchProduct(id);
+
+
   return (
     <div className='flex gap-12 mt-5'>
         <div className='infocontainer font-bold p-5 rounded-[10px]'>
@@ -13,7 +19,8 @@ export default function SingleProductPage() {
         </div>
 
         <div className='formcontainer '>
-            <form action='' className='flex flex-col'>
+            <form action={ updateProduct } className='flex flex-col'>
+                <input type='hidden' name='id' value="id" />    
                 <label>Title</label>
                 <input type='text' name='username' placeholder='samsung mobile' />
                 <label>Price</label> 
@@ -38,3 +45,6 @@ export default function SingleProductPage() {
     </div>
   )
 }
+
+
+export default SingleProductPage;

@@ -10,6 +10,7 @@ import {
   MdPublic,
   MdSearch,
 } from "react-icons/md";
+import Search from '../search/search';
 
 
 
@@ -26,8 +27,7 @@ export default function Navbar() {
 
       <div className={`${styles.menu} flex items-center gap-4`}>
         <div className={`${styles.search} flex items-center gap-2 w-full bg-[#2e374a] p-2 rounded-lg `}>
-          <MdSearch className='cursor-pointer'/>
-          <input type='text' placeholder='Search...' className={`${styles.input} bg-transparent outline-none`} />
+        <Search placeholder={`search...`}/>
         </div>
 
         <div className={`${styles.icon} flex items-center gap-3 cursor-pointer`}>

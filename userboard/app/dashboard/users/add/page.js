@@ -1,10 +1,11 @@
 import React from 'react'
 import "./user.css"
+import { addUser } from '@/app/lib/actions'
 
 export default function AddUsersPage() {
   return (
     <div className='mt-4 bg-[#182237] p-4 rounded-lg'>
-        <form action='' className='flex flex-wrap justify-between'>
+        <form action={addUser} className='flex flex-wrap justify-between'>
           <input className='w-[45%]' type='text' placeholder='username' name='username' required />
           <input className='w-[45%]' type='email' placeholder='email' name='email' required />
           <input className='w-[45%]' type='password' placeholder='password' name='password' required />

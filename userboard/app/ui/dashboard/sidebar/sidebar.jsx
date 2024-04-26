@@ -102,11 +102,16 @@ export default function Sidebar() {
           </li>
         ))}
       </ul>
+      <form action={ async () => {
+        "use server";
 
-      <button className='flex items-center gap-3 cursor-pointer hover:bg-[#2e374a] p-4 w-full rounded-lg'>
-        <MdLogout/>
-        Logout
-      </button>
+        await signOut();
+      }}>
+        <button className='flex items-center gap-3 cursor-pointer hover:bg-[#2e374a] p-4 w-full rounded-lg'>
+          <MdLogout/>
+          Logout
+        </button>
+      </form>
     </div>
   );
 }
